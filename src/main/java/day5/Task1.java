@@ -8,6 +8,6 @@ public class Task1 {
         car.setColor("Green");
         car.setYear(2020);
 
-        System.out.println("the car make " + car.getMake() + " of " + car.getColor() +" color is available." + "manufactured " + car.getYear());
+        System.out.println("the Car make " + car.getMake() + " of " + car.getColor() +" color is available." + "manufactured " + car.getYear());
     }
 }
