@@ -6,6 +6,6 @@ public class Task2 {
 
         Motorbike motorbike = new Motorbike("BMW","Black",2008);
 
-        System.out.println("the motorbike make " + motorbike.getMake() + " of " + motorbike.getColor() + " color is available." + "manufactured " + motorbike.getYear());
+        System.out.println("the Motorbike make " + motorbike.getMake() + " of " + motorbike.getColor() + " color is available." + "manufactured " + motorbike.getYear());
     }
 }
