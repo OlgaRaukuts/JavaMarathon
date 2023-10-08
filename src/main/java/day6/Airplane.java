@@ -5,7 +5,7 @@ public class Airplane {
     private int year;
     private double length;
     private double weight;
-    private double fuel = 0;
+    private double fuel;
 
     public Airplane(String manufacturer, int year, double length, double weight) {
         this.manufacturer = manufacturer;

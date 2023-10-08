@@ -7,6 +7,7 @@ public class Player {
     public static int countPlayers = 0;
     public Player(int stamina) {
         this.stamina = stamina;
+        if(countPlayers < 6)
         countPlayers++;
     }
 
@@ -18,12 +19,12 @@ public class Player {
         return countPlayers;
     }
 
-    public int run(){
+    public void run(){
         stamina--;
         if(stamina == MIN_STAMINA){
+            countPlayers--;
             System.out.println("The player needs rest");
         }
-        return stamina;
     }
 
     public static void info(){

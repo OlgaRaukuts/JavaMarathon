@@ -27,24 +27,22 @@ public class Teacher {
         this.subject = subject;
     }
 
+    String grade;
     public void evaluate(Student student){
-        int num = random(2,5);
+        Random random = new Random();
+        int num = random.nextInt(5 - 2) + 2;
         if(num==5){
-            System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName() +  " по предмету " + subject + "на оценку " + num + " ОТЛИЧНО");
+            grade = "Oтлично";
         }else if(num==4){
-            System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName() + " по предмету " + subject + "на оценку " + num + " ХОРОШО");
+           grade = "ХОРОШО";
         }else if (num==3){
-            System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName() +  " по предмету " + subject + "на оценку " + num + " УДОВЛЕТВОРИТЕЛЬНО");
+            grade = "УДОВЛЕТВОРИТЕЛЬНО";
         }else {
-            System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName() + " по предмету " + subject + "на оценку " + num + " НЕУДОВЛЕТВОРИТЕЛЬНО");
+            grade = "НЕУДОВЛЕТВОРИТЕЛЬНО";
         }
+        System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName() +  " по предмету " + subject + " на оценку " + grade);
     }
 
-    public int random(int min, int max){
-        Random random = new Random();
-        int randomNum = random.nextInt(max - min) + min;
-        return randomNum;
-    }
 }
 
 

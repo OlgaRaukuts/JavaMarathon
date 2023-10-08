@@ -28,7 +28,11 @@ public class Task2 {
         player5.run();
         player5.run();
         player5.run();
-        System.out.println(player5.run());
+
+        Player.info();
+
+        for (int i=0;i<91;i++)
+            player5.run();
 
         Player.info();
 
