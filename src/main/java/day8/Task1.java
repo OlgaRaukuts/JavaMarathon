@@ -7,19 +7,21 @@ public class Task1 {
 
         for(int i = 0; i <= 20000; i++){
         numbers = numbers + i + " ";
-            System.out.println(numbers);
         }
 
         long stopTime = System.currentTimeMillis();
-        System.out.println("Длительность работы: " + (stopTime - startTime));
+        System.out.println("Длительность работы c классом String : " + (stopTime - startTime));
+        System.out.println(numbers);
 
         System.out.println(" ============================ ");
+        StringBuilder sb = new StringBuilder();
         long startTime1 = System.currentTimeMillis();
-        StringBuilder sb = new StringBuilder(numbers);
-        System.out.println(sb.toString());
+        for(int i = 0; i <= 20000; i++){
+            sb.append(i).append(" ");
+        }
         long stopTime1 = System.currentTimeMillis();
-        System.out.println("Длительность работы: " + (stopTime1 - startTime1));
-
+        System.out.println("Длительность работы StringBuilder: " + (stopTime1 - startTime1));
+        System.out.println(sb);
     }
 
 
