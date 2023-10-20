@@ -1,4 +1,5 @@
 package day17;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,14 +9,14 @@ public class Task1 {
     public static void main(String[] args) {
 
         List<String> figures = new ArrayList<>();
+        addFigure(ROOK_WHITE.getFigureLabel(), figures,4);
+        addFigure(ROOK_BLACK.getFigureLabel(), figures,4);
+        System.out.println(figures.toString());
+    }
 
-        for(int i = 0; i < 4; i++){
-            figures.add(PAWN_WHITE.getFigureLabel());
+    public static void addFigure(String figure, List<String> chessBoard, int quantity){
+        for(int i = 0; i < quantity; i++){
+            chessBoard.add(figure);
         }
-        for(int i = 0; i <4; i++){
-            figures.add(ROOK_BLACK.getFigureLabel());
-        }
-
-        System.out.println(figures);
     }
 }
